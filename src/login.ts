@@ -2,7 +2,7 @@ import { html } from "lit-html";
 import { customElement } from "@simple-html/core";
 import { gotoURL } from "@simple-html/router/src";
 import { routerConfig } from "./routerConfig";
-import { formState } from "../state/settingsState";
+import { formState } from "./settingsState";
 
 @customElement("login-route")
 export default class extends HTMLElement {

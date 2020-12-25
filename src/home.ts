@@ -1,6 +1,6 @@
 import { html } from "lit-html";
 import { customElement } from "@simple-html/core";
-import { formState } from "src/state/settingsState";
+import { formState } from "./settingsState";
 
 @customElement("home-route")
 export default class extends HTMLElement {

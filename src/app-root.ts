@@ -1,11 +1,11 @@
 import { html } from "lit-html";
 import { customElement } from "@simple-html/core";
-import { navs, routerConfig } from "./routes/routerConfig";
+import { navs, routerConfig } from "./routerConfig";
 import { connectHashChanges, gotoURL } from "@simple-html/router";
-import { isAuthenticted, setLogoutState } from "./routes/login";
-import "./routes/routerConfig";
-import { loadIfUnknownRoute } from "./routes/loadIfUnknownRoute";
-import { formState } from "./state/settingsState";
+import { isAuthenticted, setLogoutState } from "./login";
+import "./routerConfig";
+import { loadIfUnknownRoute } from "./loadIfUnknownRoute";
+import { formState } from "./settingsState";
 
 @customElement("app-root")
 export default class extends HTMLElement {
