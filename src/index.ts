@@ -1,9 +1,14 @@
-import { customElement } from "@simple-html/core";
-import { html } from "lit-html";
+import "./index.css";
 
-@customElement("app-root")
-export default class extends HTMLElement {
-  render() {
-    return html`<span>awdssddsssssddsw<span></span></span>`;
-  }
+// only use hmr if development
+if (process.env.NODE_ENV === "development") {
+  const { applyPolyfill } = require("custom-elements-hmr-polyfill");
+  applyPolyfill();
 }
+
+// load element, so we are sure we have latest before setting root
+import("./app-root").then(() => {
+  if (document.body) {
+    document.body.innerHTML = "<app-root></app-root>";
+  }
+});
